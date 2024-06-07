@@ -1,0 +1,51 @@
+.container{
+    background-color: rgb(242 237 237);
+    border-top: 1px solid #908d8d;
+}
+.main-section{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+
+
+.addNewCollections  > div{
+    width: 150%;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.addNewCollections  > div > div > div> span{
+    display: none !important;
+} 
+.addNewCollections  > div > div > div> div > button{
+    border-bottom: 1px solid #b5bab5;
+
+} 
+
+
+
+.addbtn{
+    color: #b5bab5;
+    position: relative;
+    top: 63%;
+    left: 0%;
+    cursor: pointer;
+
+   
+}
+
+.textField{
+    width: 90%;
+    margin-bottom: 15px !important;
+}
+
+.createbtn{
+    display: flex;
+    justify-content: end;
+    margin-top: 25px;
+}
+
+
+

@@ -1,0 +1,36 @@
+.card {
+  border-radius: 25px !important;
+  margin: 16px !important;
+  width: 300px !important;
+  background-color: #f8f9fa;
+}
+
+.button {
+  background-color: #d1c4e9 !important;
+  color: #6a1b9a !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  padding: 4px 12px !important;
+  font-size: 12px !important;
+}
+
+.button:hover {
+  background-color: #b39ddb !important;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardContent {
+  text-align: left;
+  margin-top: 16px;
+}
+
+.numberIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
