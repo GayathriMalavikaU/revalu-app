@@ -4,7 +4,7 @@ import { TextField } from "@material-ui/core";
 import './style.css'
 
 
-const NewCollectionForm = ({ onSubmit }) => {
+const NewCollectionForm = ({ onSubmit, onClose }) => {
   console.log("add props", onSubmit);
   const [collectionName, setCollectionName] = useState("");
   const [description, setDescription] = useState("");
@@ -38,7 +38,7 @@ const NewCollectionForm = ({ onSubmit }) => {
       />
 
 <Grid className="createbtn">
-      <Button variant="text">Close</Button>
+      <Button variant="text" onClick={onClose}>Close</Button>
       <Button variant="contained" type="submit">Create Collection</Button>
       </Grid>
     </form>
