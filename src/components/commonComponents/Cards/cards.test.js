@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import DisplayCards from './cards';
 
 test('renders card with collection name and description', () => {
-    render(<DisplayCards collectionName="My Collection" collectionDescription="This is a test collection" />);
+  const { getByText } = render(<DisplayCards collectionName="My Collection" collectionDescription="This is a test collection" />);
   
     expect(screen.getByText(/My Collection/i)).toBeInTheDocument();
     expect(screen.getByText(/This is a test collection/i)).toBeInTheDocument();
@@ -10,7 +10,7 @@ test('renders card with collection name and description', () => {
 
   test('download button click does not call onDelete', () => {
     const mockOnDelete = jest.fn();
-    render(<DisplayCards collectionName="My Collection" onDelete={mockOnDelete} />);
+    const { getByText } = render(<DisplayCards collectionName="My Collection" onDelete={mockOnDelete} />);
   
     fireEvent.click(screen.getByText(/Download data/i));
   
@@ -18,7 +18,7 @@ test('renders card with collection name and description', () => {
   });
 
   test('delete icon click opens delete modal', () => {
-    render(<DisplayCards collectionName="My Collection" />);
+    const { getByText } = render(<DisplayCards collectionName="My Collection" />);
   
     fireEvent.click(screen.getByTestId(/DeleteIcon/i));
   

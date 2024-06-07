@@ -5,7 +5,7 @@ test('renders horizontal tabs with correct labels', () => {
       { label: 'Tab 1', component: <div>Content 1</div> },
       { label: 'Tab 2', component: <div>Content 2</div> },
     ];
-    render(<MainTabs displayTabs={displayTabs} alignment="horizontal" />);
+    const { getByText } = render(<MainTabs displayTabs={displayTabs} alignment="horizontal" />);
   
     expect(screen.getByText(/Tab 1/i)).toBeInTheDocument();
     expect(screen.getByText(/Tab 2/i)).toBeInTheDocument();
@@ -16,7 +16,7 @@ test('renders horizontal tabs with correct labels', () => {
       { label: 'Tab 1', component: <div>Content 1</div> },
       { label: 'Tab 2', component: <div>Content 2</div> },
     ];
-    render(<MainTabs displayTabs={displayTabs} alignment="vertical" />);
+    const { getByText } = render(<MainTabs displayTabs={displayTabs} alignment="vertical" />);
   
     expect(screen.getByText(/Tab 1/i)).toBeInTheDocument();
     expect(screen.getByText(/Tab 2/i)).toBeInTheDocument();
@@ -27,7 +27,7 @@ test('renders horizontal tabs with correct labels', () => {
       { label: 'Tab 1', component: <div>Content 1</div> },
       { label: 'Tab 2', component: <div>Content 2</div> },
     ];
-    render(<MainTabs displayTabs={displayTabs} alignment="horizontal" />);
+    const { getByText } = render(<MainTabs displayTabs={displayTabs} alignment="horizontal" />);
   
     expect(screen.getByText(/Content 1/i)).toBeInTheDocument();
   });
@@ -37,7 +37,7 @@ test('renders horizontal tabs with correct labels', () => {
       { label: 'Tab 1', component: <div>Content 1</div> },
       { label: 'Tab 2', component: <div>Content 2</div> },
     ];
-    render(<MainTabs displayTabs={displayTabs} alignment="horizontal" />);
+    const { getByText } = render(<MainTabs displayTabs={displayTabs} alignment="horizontal" />);
   
     fireEvent.click(screen.getByRole('tab', { name: /Tab 2/i }));
   
@@ -50,7 +50,7 @@ test('renders horizontal tabs with correct labels', () => {
       { label: 'Tab 1', component: <div>Content 1</div> },
       { label: 'Tab 2' },
     ];
-    render(<MainTabs displayTabs={displayTabs} alignment="horizontal" />);
+    const { getByText } = render(<MainTabs displayTabs={displayTabs} alignment="horizontal" />);
   
     expect(screen.getByText(/Tab 1/i)).toBeInTheDocument();
   });
